@@ -4,7 +4,7 @@ def main(page: flet.Page):
     page.title = 'Calculadora'
     page.bgcolor = "#2d2d2d"
     page.window.width = 350
-    page.window.heigth = 250
+    page.window.heigth = 300
 
 
     todos_valores =""
