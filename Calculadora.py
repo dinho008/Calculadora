@@ -34,6 +34,12 @@ def main(page: flet.Page):
             todos_valores = ""
         page.update()
 
+    def apagar_ultimo(e):
+        nonlocal todos_valores
+        todos_valores = todos_valores[:-1]
+        resultado_texto.value = todos_valores if todos_valores else "0"
+        page.update()
+
 
 
 
@@ -110,7 +116,7 @@ def main(page: flet.Page):
         [
            ("0" , {**estilo_numeros, "expand" :2},entrar_valores),
            ("." ,estilo_numeros,entrar_valores),
-           ("<" ,estilo_operadores, lambda e: None)
+           ("<", estilo_operadores, apagar_ultimo)
         ], 
 
         
